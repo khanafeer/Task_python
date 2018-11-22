@@ -26,7 +26,6 @@ class PointCity():
     def point_save(self,point,x,y,city='None'):
         self.points_wr.writerow([point,x,y,city])
 
-
     def check_points(self):
         print(self.cities,self.points)
         self.output_file = open('output_points.csv', mode='w')
@@ -41,5 +40,6 @@ class PointCity():
                 self.point_save(point,point_xy[0],point_xy[1])
         else:
             self.output_file.close()
+
 T = PointCity('cities.csv','points.csv')
 T.check_points()
